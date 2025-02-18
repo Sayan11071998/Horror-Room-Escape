@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using UnityEditor.MPE;
 using UnityEngine;
+using static LightSwitchView;
 
 public class LightSwitchView : MonoBehaviour, IInteractable
 {
@@ -41,7 +43,7 @@ public class LightSwitchView : MonoBehaviour, IInteractable
     private void onLightSwitch()
     {
         toggleLights();
-        GameService.Instance.GetInstructionView().HideInstruction();
         GameService.Instance.GetSoundView().PlaySoundEffects(SoundType.SwitchSound);
+        GameService.Instance.GetInstructionView().HideInstruction();
     }
 }
