@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,12 +7,21 @@ public class LightSwitchView : MonoBehaviour, IInteractable
     [SerializeField] private List<Light> lightsources = new List<Light>();
     private SwitchState currentState;
 
+    public delegate void LightSwitchDelegate(); // Signature
+    public LightSwitchDelegate lightSwitch; // instance
+
+    private void OnEnable()
+    {
+        lightSwitch = OnLightSwitchToggler;
+    }
+
     private void Start() => currentState = SwitchState.Off;
 
     public void Interact()
     {
-        //Todo - Implement Interaction
+        lightSwitch.Invoke();
     }
+
     private void toggleLights()
     {
         bool lights = false;
@@ -33,5 +43,12 @@ public class LightSwitchView : MonoBehaviour, IInteractable
         {
             lightSource.enabled = lights;
         }
+    }
+
+    private void OnLightSwitchToggler()
+    {
+        toggleLights();
+        GameService.Instance.GetInstructionView().HideInstruction();
+        GameService.Instance.GetSoundView().PlaySoundEffects(SoundType.SwitchSound);
     }
 }
