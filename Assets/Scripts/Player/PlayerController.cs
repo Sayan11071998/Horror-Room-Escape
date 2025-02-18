@@ -17,6 +17,7 @@ public class PlayerController
     public int KeysEquipped { get => playerScriptableObject.KeysEquipped; set => playerScriptableObject.KeysEquipped = value; }
     public PlayerState PlayerState { get => playerState; private set => playerState = value; }
 
+
     public PlayerController(PlayerView playerView, PlayerScriptableObject playerScriptableObject)
     {
         this.playerView = playerView;
@@ -26,15 +27,17 @@ public class PlayerController
         playerState = PlayerState.InDark;
 
         EventService.Instance.OnLightSwitchToggled.AddListener(onLightSwitch);
+        EventService.Instance.OnLightsOffByGhostEvent.AddListener(onLightsTurnedOffByGhost);
         EventService.Instance.OnKeyPickedUp.AddListener(onKeysPickedUp);
     }
 
     ~PlayerController()
     {
         EventService.Instance.OnLightSwitchToggled.RemoveListener(onLightSwitch);
+        EventService.Instance.OnLightsOffByGhostEvent.RemoveListener(onLightsTurnedOffByGhost);
         EventService.Instance.OnKeyPickedUp.RemoveListener(onKeysPickedUp);
     }
-
+    
     public void Interact() => IsInteracted = Input.GetKeyDown(KeyCode.E) ? true : (Input.GetKeyUp(KeyCode.E) ? false : IsInteracted);
 
     public void Jump(Rigidbody playerRigidbody, Transform transform)
@@ -87,6 +90,8 @@ public class PlayerController
         else
             PlayerState = PlayerState.InDark;
     }
+
+    private void onLightsTurnedOffByGhost() => PlayerState = PlayerState.InDark;
 
     private void onKeysPickedUp(int keys)
     {

@@ -21,16 +21,29 @@ public class GameUIView : MonoBehaviour
 
     private void OnEnable()
     {
-        tryAgainButton.onClick.AddListener(OnTryAgainButtonClicked);
-        quitButton.onClick.AddListener(OnQuitButtonClicked);
+        tryAgainButton.onClick.AddListener(onTryAgainButtonClicked);
+        quitButton.onClick.AddListener(onQuitButtonClicked);
+
         EventService.Instance.OnKeyPickedUp.AddListener(updateKeyText);
+        EventService.Instance.OnLightsOffByGhostEvent.AddListener(setRedVignette);
+    }
+    private void OnDisable()
+    {
+        EventService.Instance.OnKeyPickedUp.RemoveListener(updateKeyText);
+        EventService.Instance.OnLightsOffByGhostEvent.AddListener(setRedVignette);
     }
 
-    private void OnDisable() => EventService.Instance.OnKeyPickedUp.RemoveListener(updateKeyText);
-
     public void UpdateInsanity(float playerSanity) => insanityImage.rectTransform.localScale = new Vector3(1, playerSanity, 1);
-    private void updateKeyText(int keys) => keysFoundText.SetText($"Keys Found: {keys}/3");
 
-    private void OnQuitButtonClicked() => Application.Quit();
-    private void OnTryAgainButtonClicked() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    private void updateKeyText(int keys) => keysFoundText.SetText($"Keys Found: {keys}/ 3");
+    private void onQuitButtonClicked() => Application.Quit();
+    private void onTryAgainButtonClicked() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+    private void setRedVignette()
+    {
+        redVignette.enabled = true;
+        redVignette.canvasRenderer.SetAlpha(0.5f);
+        redVignette.CrossFadeAlpha(0, 5, false);
+    }
 }
+
