@@ -22,20 +22,17 @@ public class PlayerController
     {
         this.playerView = playerView;
         this.playerView.SetController(this);
-
         this.playerScriptableObject = playerScriptableObject;
         this.playerScriptableObject.KeysEquipped = 0;
+        playerState = PlayerState.InDark;
 
         EventService.Instance.OnLightSwitchToggled.AddListener(onLightSwitch);
-
-        playerState = PlayerState.InDark;
     }
 
     ~PlayerController()
     {
         EventService.Instance.OnLightSwitchToggled.RemoveListener(onLightSwitch);
     }
-
     public void Interact() => IsInteracted = Input.GetKeyDown(KeyCode.E) ? true : (Input.GetKeyUp(KeyCode.E) ? false : IsInteracted);
 
     public void Jump(Rigidbody playerRigidbody, Transform transform)
@@ -84,12 +81,8 @@ public class PlayerController
     private void onLightSwitch()
     {
         if (PlayerState == PlayerState.InDark)
-        {
             PlayerState = PlayerState.None;
-        }
         else
-        {
             PlayerState = PlayerState.InDark;
-        }
     }
 }
