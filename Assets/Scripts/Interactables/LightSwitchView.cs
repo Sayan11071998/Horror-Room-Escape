@@ -11,7 +11,7 @@ public class LightSwitchView : MonoBehaviour, IInteractable
     private void OnEnable()
     {
         EventService.Instance.OnLightSwitchToggled.AddListener(onLightSwitch);
-        EventService.Instance.OnLightsOffByGhostEvent.RemoveListener(onLightTurnedOffByGhost);
+        EventService.Instance.OnLightsOffByGhostEvent.AddListener(onLightTurnedOffByGhost);
     }
 
     private void OnDisable()
