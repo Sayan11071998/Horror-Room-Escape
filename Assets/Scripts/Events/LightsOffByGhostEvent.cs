@@ -3,14 +3,14 @@ using UnityEngine;
 public class LightsOffByGhostEvent : MonoBehaviour
 {
     [SerializeField] private int keysRequiredToTrigger;
-    [SerializeField] private SoundType soundType;
+    [SerializeField] private SoundType soundToPlay;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<PlayerView>() != null && keysRequiredToTrigger == GameService.Instance.GetPlayerController().KeysEquipped)
+        if (other.GetComponent<PlayerView>() != null && GameService.Instance.GetPlayerController().KeysEquipped == keysRequiredToTrigger)
         {
             EventService.Instance.OnLightsOffByGhostEvent.InvokeEvent();
-            GameService.Instance.GetSoundView().PlaySoundEffects(soundType);
+            GameService.Instance.GetSoundView().PlaySoundEffects(soundToPlay);
             GetComponent<Collider>().enabled = false;
         }
     }
