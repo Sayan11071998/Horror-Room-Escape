@@ -686,6 +686,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599153318}
   m_CullTransparentMesh: 1
+--- !u!1 &625412454 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4816212304719460222, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+  m_PrefabInstance: {fileID: 6752750673420198865}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &625412458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625412454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 093440b319b68a343a89b1e48903863b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundToPlay: 10
+  eventDuration: 10
 --- !u!1 &722220105
 GameObject:
   m_ObjectHideFlags: 0
@@ -2573,9 +2592,21 @@ PrefabInstance:
       propertyPath: skulls
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3139916214605206466, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3139916214605206466, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.437
+      objectReference: {fileID: 0}
     - target: {fileID: 3756171719320347554, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.062
+      objectReference: {fileID: 0}
+    - target: {fileID: 4816212304719460222, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      propertyPath: m_Name
+      value: HauntedMusicBoxEvent Trigger
       objectReference: {fileID: 0}
     - target: {fileID: 5325831579243014017, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2659,6 +2690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2560139692387750709, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+    - {fileID: 4041018774328199081, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
     m_RemovedGameObjects:
     - {fileID: 7486387766096672304, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
     m_AddedGameObjects:
@@ -2675,6 +2707,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1262625515}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4816212304719460222, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 625412458}
     - targetCorrespondingSourceObject: {fileID: 96017228111626481, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 475330411}
@@ -2816,6 +2851,18 @@ PrefabInstance:
       propertyPath: backgroundMusic
       value: 
       objectReference: {fileID: 8225950124344110253}
+    - target: {fileID: 9192946658940668406, guid: 5fb9d3aeda3456c4c884e223e16fb778, type: 3}
+      propertyPath: audioList.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192946658940668406, guid: 5fb9d3aeda3456c4c884e223e16fb778, type: 3}
+      propertyPath: audioList.Array.data[10].audio
+      value: 
+      objectReference: {fileID: 8300000, guid: 741f4771fadb6b242ad5eeaa898dd552, type: 3}
+    - target: {fileID: 9192946658940668406, guid: 5fb9d3aeda3456c4c884e223e16fb778, type: 3}
+      propertyPath: audioList.Array.data[10].soundType
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 9192946658940668407, guid: 5fb9d3aeda3456c4c884e223e16fb778, type: 3}
       propertyPath: m_RootOrder
       value: 6
