@@ -22,6 +22,7 @@ public class GameService : GenericMonoSingleton<GameService>
     // we can keep it same for now?
 
     public PlayerController GetPlayerController() => playerController;
+    public PlayerView GetPlayerView() => playerView;
     public GameUIView GetGameUI() => gameUIView;
     public InstructionView GetInstructionView() => instructionView;
     public SoundView GetSoundView() => soundView;
