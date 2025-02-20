@@ -61,7 +61,6 @@ public class CreepyDollEvent : MonoBehaviour
     private IEnumerator StopAndDestroyEffect()
     {
         yield return new WaitForSeconds(effectDuration);
-
         isFlickering = false;
 
         if (spawnedDoll != null)

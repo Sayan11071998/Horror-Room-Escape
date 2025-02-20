@@ -18,6 +18,9 @@ public class CameraView : MonoBehaviour
         EventService.Instance.OnRatRush.AddListener(Shake);
         EventService.Instance.OnSkullDrop.AddListener(Shake);
         EventService.Instance.OnCreepyDollEvent.AddListener(Shake);
+        EventService.Instance.OnHallOfWhispersEvent.AddListener(Shake);
+        EventService.Instance.OnHauntedMusicBoxEvent.AddListener(Shake);
+        EventService.Instance.OnHauntedPaintingEvent.AddListener(Shake);
     }
 
     private void OnDisable()
@@ -27,6 +30,9 @@ public class CameraView : MonoBehaviour
         EventService.Instance.OnRatRush.RemoveListener(Shake);
         EventService.Instance.OnSkullDrop.RemoveListener(Shake);
         EventService.Instance.OnCreepyDollEvent.RemoveListener(Shake);
+        EventService.Instance.OnHallOfWhispersEvent.RemoveListener(Shake);
+        EventService.Instance.OnHauntedMusicBoxEvent.RemoveListener(Shake);
+        EventService.Instance.OnHauntedPaintingEvent.RemoveListener(Shake);
     }
 
     private void Start()
