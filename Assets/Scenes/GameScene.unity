@@ -473,7 +473,7 @@ MonoBehaviour:
   - {fileID: 811227580}
   shadowFigurePrefab: {fileID: 6646716870210969847, guid: 610f53f28c969654d8ded39c2bfead14, type: 3}
   shadowSpawnPoint: {fileID: 1262625515}
-  eventDuration: 8
+  eventDuration: 5
   shakeAmount: 0.1
 --- !u!1 &574964454
 GameObject:
@@ -2594,11 +2594,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3139916214605206466, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.23
+      value: -1.147
       objectReference: {fileID: 0}
     - target: {fileID: 3139916214605206466, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.437
+      value: 2.237
       objectReference: {fileID: 0}
     - target: {fileID: 3756171719320347554, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2665,6 +2665,10 @@ PrefabInstance:
       value: -0.333
       objectReference: {fileID: 0}
     - target: {fileID: 6985330619481300648, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+      propertyPath: eventDuration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985330619481300648, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
       propertyPath: keysRequiredToTrigger
       value: 6
       objectReference: {fileID: 0}
@@ -2691,8 +2695,10 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2560139692387750709, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
     - {fileID: 4041018774328199081, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+    - {fileID: 8338575927833516725, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
     m_RemovedGameObjects:
     - {fileID: 7486387766096672304, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
+    - {fileID: 821492933852114513, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2168825235674747603, guid: d2470b45bfcea9e4780d1866d7cd0f8c, type: 3}
       insertIndex: -1

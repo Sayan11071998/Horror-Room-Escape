@@ -23,7 +23,7 @@ public class PlayerSanity : MonoBehaviour
     {
         EventService.Instance.OnRatRush.RemoveListener(OnSupernaturalEvent);
         EventService.Instance.OnSkullDrop.RemoveListener(OnSupernaturalEvent);
-        EventService.Instance.OnPotionDrinkEvent.AddListener(OnDrankPotion);
+        EventService.Instance.OnPotionDrinkEvent.RemoveListener(OnDrankPotion);
         EventService.Instance.OnCreepyDollEvent.RemoveListener(OnSupernaturalEvent);
         EventService.Instance.OnHallOfWhispersEvent.RemoveListener(OnSupernaturalEvent);
         EventService.Instance.OnHauntedPaintingEvent.RemoveListener(OnSupernaturalEvent);
