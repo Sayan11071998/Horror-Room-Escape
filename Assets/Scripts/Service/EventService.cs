@@ -21,6 +21,7 @@ public class EventService
     public EventController<int> OnPotionDrinkEvent { get; private set; }
     public EventController OnCreepyDollEvent { get; private set; }
     public EventController OnHallOfWhispersEvent { get; private set; }
+    public EventController OnHauntedPaintingEvent { get; private set; }
     public EventController OnPlayerEscapedEvent { get; private set; }
     public EventController OnPlayerDeathEvent { get; private set; }
 
@@ -34,6 +35,7 @@ public class EventService
         OnPotionDrinkEvent = new EventController<int>();
         OnCreepyDollEvent = new EventController();
         OnHallOfWhispersEvent = new EventController();
+        OnHauntedPaintingEvent = new EventController();
         OnPlayerEscapedEvent = new EventController();
         OnPlayerDeathEvent = new EventController();
     }
