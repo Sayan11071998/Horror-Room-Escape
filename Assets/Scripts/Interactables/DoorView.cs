@@ -1,17 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DoorView : MonoBehaviour, IInteractable
 {
     [SerializeField] private float swingAngle;
     [SerializeField] private int keysRequiredToOpen;
+
     private DoorState currentState;
 
-    private void Start()
-    {
-        currentState = DoorState.Locked;
-    }
+    private void Start() => currentState = DoorState.Locked;
+
     public void Interact()
     {
         GameService.Instance.GetInstructionView().HideInstruction();

@@ -44,7 +44,6 @@ public class HauntedPaintingEvent : MonoBehaviour
         }
 
         StartCoroutine(ShakeFurniture());
-
         yield return new WaitForSeconds(eventDuration);
 
         foreach (GameObject painting in paintings)
