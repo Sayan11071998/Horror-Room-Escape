@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameUIView : MonoBehaviour
 {
@@ -18,6 +19,11 @@ public class GameUIView : MonoBehaviour
     [SerializeField] TextMeshProUGUI gameEndText;
     [SerializeField] Button tryAgainButton;
     [SerializeField] Button quitButton;
+
+    [Header("Achievement UI")]
+    [SerializeField] private GameObject achievementPopup;
+    [SerializeField] private TextMeshProUGUI achievementTitleText;
+    [SerializeField] private TextMeshProUGUI achievementDescriptionText;
 
     private void OnEnable()
     {
@@ -74,5 +80,20 @@ public class GameUIView : MonoBehaviour
     {
         gameEndText.SetText("You Escaped");
         gameEndPanel.SetActive(true);
+    }
+
+    public void ShowAchievementPopup(string title, string description)
+    {
+        achievementTitleText.SetText(title);
+        achievementDescriptionText.SetText(description);
+        achievementPopup.SetActive(true);
+
+        StartCoroutine(HideAchievementPopup());
+    }
+
+    private IEnumerator HideAchievementPopup()
+    {
+        yield return new WaitForSeconds(3f);
+        achievementPopup.SetActive(false);
     }
 }
