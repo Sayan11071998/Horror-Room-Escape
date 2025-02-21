@@ -84,4 +84,9 @@ public class PlayerSanity : MonoBehaviour
     {
         decreaseSanity(potionEffect);
     }
+
+    public float GetCurrentSanity()
+    {
+        return sanityLevel;
+    }
 }
