@@ -1,8 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 
 public class InstructionView : MonoBehaviour
 {
@@ -70,10 +68,7 @@ public class InstructionView : MonoBehaviour
         }
     }
 
-    private void showLightOffInstructions()
-    {
-        ShowInstruction((InstructionType.LightsOff));
-    }
+    private void showLightOffInstructions() => ShowInstruction((InstructionType.LightsOff));
 
     private void showInstruction(InstructionSciprtableObject instruction)
     {

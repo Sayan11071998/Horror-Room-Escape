@@ -36,7 +36,6 @@ public class CreepyDollEvent : MonoBehaviour
         GameService.Instance.GetSoundView().PlaySoundEffects(soundToPlay);
         
         StartCoroutine(StopAndDestroyEffect());
-
         GetComponent<Collider>().enabled = false;
     }
 

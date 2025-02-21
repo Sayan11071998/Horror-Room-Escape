@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SoundView : MonoBehaviour
@@ -14,6 +12,7 @@ public class SoundView : MonoBehaviour
     public void PlaySoundEffects(SoundType soundType, bool loopSound = false)
     {
         AudioClip clip = getSoundClip(soundType);
+
         if (clip != null)
         {
             audioEffects.loop = loopSound;
@@ -28,6 +27,7 @@ public class SoundView : MonoBehaviour
     private void playbackgroundMusic(SoundType soundType, bool loopSound = false)
     {
         AudioClip clip = getSoundClip(soundType);
+
         if (clip != null)
         {
             backgroundMusic.loop = loopSound;
@@ -39,14 +39,15 @@ public class SoundView : MonoBehaviour
         }
     }
 
-
     private AudioClip getSoundClip(SoundType soundType)
     {
         Sounds st = Array.Find(audioList, item => item.soundType == soundType);
+
         if (st != null)
         {
             return st.audio;
         }
+        
         return null;
     }
 }

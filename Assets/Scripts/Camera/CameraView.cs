@@ -35,10 +35,7 @@ public class CameraView : MonoBehaviour
         EventService.Instance.OnHauntedPaintingEvent.RemoveListener(Shake);
     }
 
-    private void Start()
-    {
-        originalPosition = transform.localPosition;
-    }
+    private void Start() => originalPosition = transform.localPosition;
 
     private void Update()
     {
@@ -61,7 +58,10 @@ public class CameraView : MonoBehaviour
     private void Shake()
     {
         if (shakeCorroutine != null)
+        {
             stopCoroutine(shakeCorroutine);
+        }
+
         shakeCorroutine = StartCoroutine(ShakeCoroutine(defaultShakeDuration, defaultShakeMagnitude));
     }
 

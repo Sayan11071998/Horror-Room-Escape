@@ -17,8 +17,5 @@ public class SkullDropEvent : MonoBehaviour
         }
     }
 
-    private void OnSkullDrop()
-    {
-        skulls.gameObject.SetActive(true);
-    }
+    private void OnSkullDrop() => skulls.gameObject.SetActive(true);
 }

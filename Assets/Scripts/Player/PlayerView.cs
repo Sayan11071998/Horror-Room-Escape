@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerView : MonoBehaviour
@@ -17,6 +14,7 @@ public class PlayerView : MonoBehaviour
         playerController.Jump(playerRigidbody, transform);
         playerController.Interact();
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<IInteractable>() != null)
@@ -24,15 +22,18 @@ public class PlayerView : MonoBehaviour
             GameService.Instance.GetInstructionView().ShowInstruction(InstructionType.Interact);
         }
     }
+
     private void OnTriggerStay(Collider other)
     {
         IInteractable interactable;
+
         if (other.TryGetComponent(out interactable) && playerController.IsInteracted)
         {
             playerController.IsInteracted = false;
             interactable.Interact();
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.GetComponent<IInteractable>() != null)
@@ -40,6 +41,6 @@ public class PlayerView : MonoBehaviour
             GameService.Instance.GetInstructionView().HideInstruction();
         }
     }
-    public void SetController(PlayerController _playerController) => playerController = _playerController;
 
+    public void SetController(PlayerController _playerController) => playerController = _playerController;
 }

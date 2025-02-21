@@ -1,4 +1,5 @@
 using UnityEngine;
+
 public class PlayerController
 {
     private PlayerView playerView;
@@ -26,6 +27,7 @@ public class PlayerController
         EventService.Instance.OnKeyPickedUp.AddListener(OnKeyPickedUp);
         EventService.Instance.OnPlayerEscapedEvent.AddListener(DisableControls);
     }
+
     ~PlayerController()
     {
         EventService.Instance.OnLightsOffByGhostEvent.RemoveListener(onLightsOffByGhost);
@@ -33,6 +35,7 @@ public class PlayerController
         EventService.Instance.OnKeyPickedUp.RemoveListener(OnKeyPickedUp);
         EventService.Instance.OnPlayerEscapedEvent.RemoveListener(DisableControls);
     }
+
     public void Interact() => IsInteracted = Input.GetKeyDown(KeyCode.E) ? true : (Input.GetKeyUp(KeyCode.E) ? false : IsInteracted);
 
     public void Jump(Rigidbody playerRigidbody, Transform transform)
@@ -74,6 +77,7 @@ public class PlayerController
         mouseX = Input.GetAxis("Mouse X");
         velocity = Input.GetKey(KeyCode.LeftShift) ? playerScriptableObject.sprintSpeed : playerScriptableObject.walkSpeed;
     }
+
     private void calculatePositionRotation(Rigidbody playerRigidbody, Transform transform, out Quaternion rotation, out Vector3 position)
     {
         Vector3 lookRotation = new Vector3(0, mouseX * playerScriptableObject.sensitivity, 0);
@@ -82,11 +86,16 @@ public class PlayerController
         rotation = playerRigidbody.rotation * Quaternion.Euler(lookRotation);
         position = (transform.position) + (velocity * movement) * Time.fixedDeltaTime;
     }
+
     private void onLightsToggled()
     {
         if (PlayerState == PlayerState.InDark)
+        {
             PlayerState = PlayerState.None;
+        }
         else
+        {
             PlayerState = PlayerState.InDark;
+        }
     }
 }
