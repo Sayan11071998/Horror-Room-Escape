@@ -3,7 +3,7 @@
 I'm super excited to share my latest adventure – Horror Room Escape – a first-person horror game that will keep you on the edge of your seat!
 
 ## *✨ Immersive Experience:**
-***👻 Trapped in a Haunted Mansion:*** Explore eerie rooms, solve puzzles, and manage your sanity to escape this spine-chilling environment.
+***👻 Trapped in a Haunted Mansion:*** Explore eerie rooms, solve puzzles, and manage your sanity to escape this spine-chilling environment.  
 ***💀 Spine-Chilling Horror Events:***
 - 👉 Light Off By Ghost: Step away from the light and watch as ghostly forces plunge you into darkness with a creepy baby smile.
 - 👉 Rat Rush: Cross a threshold and brace yourself for a sudden swarm of rats!
