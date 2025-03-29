@@ -1,4 +1,4 @@
-# 🚀 Project Milestone: Horror Room Escape! 🎮👻
+# 🚀 Horror Room Escape! 🎮👻
 
 I'm super excited to share my latest adventure – **Horror Room Escape** – a first-person horror game that will keep you on the edge of your seat!
 
