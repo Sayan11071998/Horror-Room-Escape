@@ -1,31 +1,98 @@
-# 🚀 Horror Room Escape! 🎮👻
+# Horror Room Escape
 
-I'm super excited to share my latest adventure – **Horror Room Escape** – a first-person horror game that will keep you on the edge of your seat!
+**Horror Room Escape** is a first-person psychological horror game built in Unity. The player is trapped inside a haunted mansion and must explore, solve puzzles, and maintain sanity to escape. With immersive audio-visual design, unpredictable horror events, and an evolving environment, this game creates a deeply atmospheric and unsettling experience.
 
-## ✨ Immersive Experience:
-- **👻 Trapped in a Haunted Mansion:** Explore eerie rooms, solve puzzles, and manage your sanity to escape this spine-chilling environment.
+---
 
-## 💀 Spine-Chilling Horror Events:
-- **👉 Light Off By Ghost:** Step away from the light and watch as ghostly forces plunge you into darkness with a creepy baby smile.
-- **👉 Rat Rush:** Cross a threshold and brace yourself for a sudden swarm of rats!
-- **👉 Skull Drop:** Feel the suspense as a cascade of skulls falls from above.
-- **👉 Creepy Doll:** An eerie doll with glowing red eyes appears and vanishes in a blink.
-- **👉 Hall of Whispers:** Wander through a hallway where flickering lights and ghostly whispers send shivers down your spine.
-- **👉 Haunted Painting:** See paintings vanish, shadow figures emerge, and furniture shake violently in pure terror.
-- **👉 Haunted Music Box:** Listen as a mysterious melody twists into dissonance, leaving an unsettling silence.
+## 🔦 Immersive Gameplay Features
 
-## 😨 Player Health & Achievements:
-- **👉 Sanity-Based Health:** Keep an eye on your sanity as darkness and horror events sap your strength.
-- **👉 Dynamic Achievements:** Unlock badges like `KEYMASTER`, `SANITY SAVER`, and `TORMENTED SURVIVOR`—all managed directly through the Unity Editor.
+- **Trapped in a Haunted Mansion**  
+  Navigate a multi-room layout including drawing room, kitchen, hallway, and hidden sections, each with unique ambient effects and horror triggers.
 
-## 💡 Key Learnings:
-- **🎨 Level Design:** Designed a multi-room mansion—including a drawing room, hallway, kitchen, and more—to amplify the horror and create a truly immersive experience.
-- **🔄 Observer Pattern Mastery:** Leveraged the Observer design pattern to efficiently trigger and manage multiple horror events.
-- **🔧 Event-Driven Architecture:** Built a robust system using delegates and events for smooth communication between game components.
-- **⚡ Action & Generic Action Integration:** Utilized C#’s Action types to create flexible, reusable event handlers.
-- **🎥 Dynamic Audio & Visuals:** Crafted immersive audio-visual effects that respond dynamically to in-game events.
-- **🚀 Agile Development:** Developed configurable systems in the Unity Editor for rapid balancing and iteration.
-- **⚙️ Performance & Synchronization:** Overcame challenges to ensure smooth performance even with simultaneous horror events.
+- **Sanity-Based Health System**  
+  Exposure to darkness and supernatural events drains the player’s sanity. Players must stay in light and avoid repeated exposure to preserve health.
+
+- **Achievement System**  
+  Unlock dynamic in-game achievements such as:
+  - `KEYMASTER`: Found all hidden keys.
+  - `SANITY SAVER`: Maintained high sanity levels.
+  - `TORMENTED SURVIVOR`: Escaped with minimal sanity remaining.  
+  Achievements are managed directly through the Unity Editor using custom tools.
+
+---
+
+## 👻 Spine-Chilling Horror Events
+
+- **Light-Off by Ghost**  
+  Lights suddenly turn off when players stray too far, accompanied by creepy baby laughter.
+
+- **Rat Rush**  
+  Triggers a sudden swarm of rats as players cross thresholds.
+
+- **Skull Drop**  
+  Randomized falling skulls simulate jump scares and ambient dread.
+
+- **Creepy Doll Appearances**  
+  Red-eyed dolls appear and vanish, unsettling players during exploration.
+
+- **Hall of Whispers**  
+  A flickering hallway filled with whispers and shadows reacts to player proximity.
+
+- **Haunted Painting Sequence**  
+  Paintings disappear, shadows appear, and nearby furniture violently shakes.
+
+- **Music Box Meltdown**  
+  A haunted melody grows warped, ending with an unnerving silence and surprise scare.
+
+---
+
+## 💡 Key Learnings and Technical Highlights
+
+- **Level Design & Environment Storytelling**  
+  Built a modular, reusable haunted mansion environment with visual and lighting cues to guide and mislead players.
+
+- **Observer Pattern**  
+  Implemented the Observer pattern to trigger and synchronize multiple horror events across the scene.
+
+- **Event-Driven Architecture**  
+  Used C# delegates and events to allow loose coupling between systems for improved modularity and scalability.
+
+- **Flexible Action Handlers**  
+  Employed `Action` and `Action<T>` delegates for clean, extensible event callbacks.
+
+- **Dynamic Audio-Visual System**  
+  Real-time audio cues, flickering lights, and reactive particles respond to game triggers and player choices.
+
+- **Unity Editor Integration**  
+  Built custom editor tools to streamline the creation of events, achievements, and sanity modifiers—supporting agile development and iteration.
+
+- **Performance Optimization**  
+  Balanced simultaneous event triggering while ensuring smooth performance across mid-range hardware.
+
+---
+
+## 🧠 Development Focus Areas
+
+- Modular horror systems with reusable trigger logic
+- Immersive first-person controls with sanity integration
+- Efficient use of Unity systems including the editor, physics, lighting, and animation
+- Real-time synchronization of audio, light, and gameplay triggers
+- Clean architecture using SOLID principles and design patterns
+
+---
+
+## 🚪 Ready to Escape?
+
+This project explores psychological fear through pacing, unpredictability, and system-driven horror logic. It taught me the importance of balance between tension and release, how to build reusability into event systems, and how to integrate multiple Unity subsystems for a cohesive game feel.
+
+Let’s connect if you enjoy Unity development, horror game mechanics, or want to collaborate on immersive experiences!
+
+---
+
+## Play Link
+
+[![Watch the video](https://img.youtube.com/vi/aUxLmKuUK7I/maxresdefault.jpg)](https://youtu.be/aUxLmKuUK7I)
+### [Gameplay Video](https://youtu.be/aUxLmKuUK7I)
 
 ![Image](https://github.com/user-attachments/assets/1d45c1a3-3fd9-40d3-81b3-44407ac95a22)
 
