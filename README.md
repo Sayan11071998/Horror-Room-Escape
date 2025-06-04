@@ -90,6 +90,7 @@ Let’s connect if you enjoy Unity development, horror game mechanics, or want t
 ---
 
 ## Play Link
+https://sayannandi.itch.io/horror-room-e
 
 [![Watch the video](https://img.youtube.com/vi/aUxLmKuUK7I/maxresdefault.jpg)](https://youtu.be/aUxLmKuUK7I)
 ### [Gameplay Video](https://youtu.be/aUxLmKuUK7I)
